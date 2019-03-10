@@ -1,0 +1,45 @@
+{
+	"name": "kyber-homework",
+	"version": "1.0.0",
+	"description": "Kyber Homework Project - Basic login/signup",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server --mode development",
+		"build": "webpack --mode production"
+	},
+	"keywords": [
+		"kyber",
+		"homework"
+	],
+	"repositories": "",
+	"author": "Nguyen Le Quang",
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap": "^4.3.1",
+		"lodash": "^4.17.11",
+		"prop-types": "^15.7.2",
+		"react": "^16.8.4",
+		"react-dom": "^16.8.4",
+		"react-hot-loader": "^4.8.0",
+		"react-redux": "^6.0.1",
+		"react-router-dom": "^4.3.1",
+		"reactstrap": "^7.1.0",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0",
+		"styled-components": "^4.1.3",
+		"uuid4": "^1.1.4"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.3.4",
+		"@babel/preset-env": "^7.3.4",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.5",
+		"css-loader": "^2.1.1",
+		"html-webpack-plugin": "^3.2.0",
+		"style-loader": "^0.23.1",
+		"webpack": "^4.29.6",
+		"webpack-cli": "^3.2.3",
+		"webpack-dev-server": "^3.2.1"
+	}
+}
