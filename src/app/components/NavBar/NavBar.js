@@ -31,7 +31,7 @@ const NavBar = props => {
 			expand="sm"
 			style={{ justifyContent: "space-between" }}
 		>
-			<Link to="/">Home</Link>
+			<NavbarBrand href="/">Home</NavbarBrand>
 
 			{currentUser && (
 				<ButtonGroup>

@@ -25,6 +25,7 @@ const StyledCol = styled(Col)`
 		text-align: center;
 	}
 	padding-top: 10px;
+	padding-bottom: 15px;
 `;
 
 const LoginPage = props => {

@@ -23,6 +23,7 @@ const StyledCol = styled(Col)`
 		text-align: center;
 	}
 	padding-top: 10px;
+	padding-bottom: 15px;
 `;
 
 const SignupPage = props => {
@@ -252,11 +253,14 @@ const SignupPage = props => {
 			</Row>
 
 			{/* Alert */}
-			<br />
-			<Alert color="success" isOpen={isRegisterSuccess}>
-				<span>Register success!</span>
-				<Link to="/login">&nbsp;Click here to return login page.</Link>
-			</Alert>
+			<div>
+				<Alert color="success" isOpen={isRegisterSuccess}>
+					<span>Register success!</span>
+					<Link to="/login">
+						&nbsp;Click here to return login page.
+					</Link>
+				</Alert>
+			</div>
 		</SingleFormLayout>
 	);
 };
