@@ -11,10 +11,11 @@ const currentUserReducer = (state = null, action) => {
 			return null;
 		}
 		case types.USER_EDIT: {
+			const { name, age } = action.payload;
 			return {
 				...state,
-				name: action.name,
-				age: action.age
+				name,
+				age
 			};
 		}
 		default:

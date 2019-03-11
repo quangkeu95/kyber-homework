@@ -30,11 +30,12 @@ const UserProfilePage = props => {
 			name: editForm.name,
 			age: editForm.age
 		};
-		doEdit(userInfo);
+		doEdit(JSON.parse(JSON.stringify(userInfo)));
 		changeEditForm({
 			name: currentUser ? currentUser.name : "",
 			age: currentUser ? currentUser.age : ""
 		});
+		changeIsEdit(false);
 	};
 
 	const onCancelEdit = () => {
@@ -63,7 +64,7 @@ const UserProfilePage = props => {
 								<div>
 									<p>{`Name: ${
 										currentUser.name.length > 0
-											? currentUser.username
+											? currentUser.name
 											: "<Not Provide>"
 									}`}</p>
 									<p>{`Age: ${

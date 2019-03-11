@@ -6,16 +6,17 @@ const listUserReducers = (state = [], action) => {
 			return [...state, action.payload];
 		}
 		case types.UPDATE_USER_IN_LIST: {
+			const { id, name, age } = action.payload;
 			if (state.length > 0) {
 				return state.map(item => {
-					if (item.id !== action.id) {
+					if (item.id !== id) {
 						return item;
 					}
 
 					return {
 						...item,
-						name: action.name,
-						age: action.age
+						name,
+						age
 					};
 				});
 			} else {
