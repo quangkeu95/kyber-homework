@@ -36,7 +36,7 @@ const NavBar = props => {
 			{currentUser && (
 				<ButtonGroup>
 					<Link to="user-profile">
-						<Button className="btn-info">
+						<Button className="btn-info mr-2">
 							<i className="far fa-user mr-2" />
 							User Profile
 						</Button>
@@ -53,7 +53,7 @@ const NavBar = props => {
 			{!currentUser && (
 				<ButtonGroup>
 					<Link to="/login">
-						<Button className="btn-light">Login</Button>
+						<Button className="btn-light mr-2">Login</Button>
 					</Link>
 					<Link to="/signup">
 						<Button color="primary">Sign Up</Button>
