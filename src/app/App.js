@@ -6,6 +6,7 @@ import { HomePage } from "./containers/HomePage";
 import { LoginPage } from "./containers/LoginPage";
 import { SignupPage } from "./containers/SignupPage";
 import { UserProfilePage } from "./containers/UserProfilePage";
+import { NotFoundPage } from "./components/NotFoundPage";
 
 const App = props => {
 	return (
@@ -17,6 +18,7 @@ const App = props => {
 					<Route path="/login" component={LoginPage} />
 					<Route path="/signup" component={SignupPage} />
 					<Route path="/user-profile" component={UserProfilePage} />
+					<Route component={NotFoundPage} />
 				</Switch>
 			</div>
 		</Router>

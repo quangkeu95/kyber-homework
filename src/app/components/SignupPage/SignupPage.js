@@ -19,7 +19,7 @@ import {
 import { SingleFormLayout } from "../Common";
 
 const StyledCol = styled(Col)`
-	@media (max-width: 540px) {
+	@media (max-width: 576px) {
 		text-align: center;
 	}
 	padding-top: 10px;

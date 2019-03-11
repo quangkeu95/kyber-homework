@@ -21,7 +21,7 @@ const USER_DO_NOT_EXIST_CODE = 2;
 const PASSWORD_INCORRECT_CODE = 3;
 
 const StyledCol = styled(Col)`
-	@media (max-width: 540px) {
+	@media (max-width: 576px) {
 		text-align: center;
 	}
 	padding-top: 10px;

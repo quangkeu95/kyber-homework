@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import userIcon from "../../../assets/icon/user.svg";
 
 const NavBar = props => {
 	const { currentUser, doLogout, history } = props;
@@ -37,8 +38,8 @@ const NavBar = props => {
 				<ButtonGroup>
 					<Link to="user-profile">
 						<Button className="btn-info mr-2">
-							<i className="far fa-user mr-2" />
-							User Profile
+							<img src={userIcon} alt="user-icon" />
+							<span className="ml-2">User Profile</span>
 						</Button>
 					</Link>
 					<Button

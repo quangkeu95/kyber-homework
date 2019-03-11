@@ -14,7 +14,11 @@ const SingleFormLayout = props => {
 	return (
 		<Layout className={className}>
 			<Row style={{ width: "100%" }}>
-				<Col md={{ size: 6, offset: 3 }} xl={{ size: 4, offset: 4 }}>
+				<Col
+					sm={{ size: 10, offset: 1 }}
+					md={{ size: 6, offset: 3 }}
+					xl={{ size: 4, offset: 4 }}
+				>
 					{children}
 				</Col>
 			</Row>

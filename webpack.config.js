@@ -37,6 +37,17 @@ const config = {
 						}
 					}
 				]
+			},
+			{
+				test: /\.(jpe?g|png|gif|svg|ttf)$/i,
+				use: [
+					{
+						loader: "url-loader",
+						options: {
+							limit: 8000
+						}
+					}
+				]
 			}
 		]
 	},

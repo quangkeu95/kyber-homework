@@ -5,7 +5,7 @@ import { SingleFormLayout } from "../Common";
 import styled from "styled-components";
 
 const CenteredContainer = styled.div`
-	@media (max-width: 540px) {
+	@media (max-width: 576px) {
 		text-align: center;
 	}
 	margin: 10px 0;
@@ -51,7 +51,12 @@ const UserProfilePage = props => {
 			<Row>
 				<Col xs={12} sm={4}>
 					<CenteredContainer>
-						<i className="far fa-user-circle fa-7x" />
+						<img
+							className="img-fluid"
+							src={`http://i.pravatar.cc/128?u=${currentUser.id}`}
+							alt="user-icon"
+						/>
+						{/* <i className="far fa-user-circle fa-7x" /> */}
 					</CenteredContainer>
 				</Col>
 				<Col xs={12} sm={8}>
