@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 // common
-import { SingleFormLayout } from "../Common";
+import { SingleFormLayout, LoadingDots } from "../Common";
 
 import {
 	Form,
@@ -40,7 +40,7 @@ const LoginPage = props => {
 
 	const [validateLogin, changeValidateLogin] = useState(null);
 
-	const { listUsers, doLogin } = props;
+	const { listUsers, doLogin, history } = props;
 
 	const onChangeUsername = value => {
 		// Reset validate when input change
@@ -106,6 +106,9 @@ const LoginPage = props => {
 		if (isUsernameCorrect && foundTarget.length > 0) {
 			changeValidateLogin(SUCCESS_CODE);
 			doLogin(foundTarget[0]);
+			setTimeout(() => {
+				history.push("/");
+			}, 3000);
 		} else if (isUsernameCorrect === false) {
 			changeValidateLogin(USER_DO_NOT_EXIST_CODE);
 		} else if (foundTarget.length <= 0) {
@@ -179,10 +182,13 @@ const LoginPage = props => {
 				<Alert
 					color="success"
 					isOpen={validateLogin === SUCCESS_CODE}
-					toggle={() => changeValidateLogin(null)}
+					// toggle={() => changeValidateLogin(null)}
 				>
-					<span>Login success!</span>
-					<Link to="/">&nbsp;Click here to return home page.</Link>
+					<span>
+						Login success! Redirect to home page in a few seconds.
+					</span>
+					<LoadingDots className="text-center" />
+					{/* <Link to="/">&nbsp;Click here to return home page.</Link> */}
 				</Alert>
 				{/* <Alert
 				color="danger"
@@ -203,4 +209,4 @@ const LoginPage = props => {
 	);
 };
 
-export default LoginPage;
+export default withRouter(LoginPage);
