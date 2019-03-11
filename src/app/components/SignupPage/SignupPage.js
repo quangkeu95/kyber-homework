@@ -254,7 +254,11 @@ const SignupPage = props => {
 
 			{/* Alert */}
 			<div>
-				<Alert color="success" isOpen={isRegisterSuccess}>
+				<Alert
+					color="success"
+					isOpen={isRegisterSuccess}
+					toggle={() => changeIsRegisterSuccess(false)}
+				>
 					<span>Register success!</span>
 					<Link to="/login">
 						&nbsp;Click here to return login page.

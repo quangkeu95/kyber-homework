@@ -1,1 +1,1 @@
-export { default as listUserOperations } from "./listUserOperations";
+export { default as currentUserOperations } from "./currentUserOperations";

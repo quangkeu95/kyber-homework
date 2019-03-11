@@ -13,7 +13,15 @@ const doLogout = () => {
 	};
 };
 
+const editUser = userInfo => {
+	return {
+		type: types.USER_EDIT,
+		payload: userInfo
+	};
+};
+
 export default {
 	doLogin,
-	doLogout
+	doLogout,
+	editUser
 };

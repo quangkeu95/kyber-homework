@@ -10,6 +10,13 @@ const currentUserReducer = (state = null, action) => {
 		case types.USER_LOGOUT: {
 			return null;
 		}
+		case types.USER_EDIT: {
+			return {
+				...state,
+				name: action.name,
+				age: action.age
+			};
+		}
 		default:
 			return state;
 	}

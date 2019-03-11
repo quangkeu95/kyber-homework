@@ -10,7 +10,7 @@ const registerUser = userInfo => {
 		username,
 		password,
 		name: "",
-		age: null
+		age: ""
 	};
 
 	return {
@@ -19,4 +19,11 @@ const registerUser = userInfo => {
 	};
 };
 
-export default { registerUser };
+const updateUserInList = userInfo => {
+	return {
+		type: types.UPDATE_USER_IN_LIST,
+		payload: userInfo
+	};
+};
+
+export default { registerUser, updateUserInList };
